@@ -1,0 +1,7 @@
+{
+  "periods": ["2026-06-20", "2026-07-18"],
+  "cycle_days": 28,
+  "cycle_source": "calculated_from_history",
+  "sample_count": 2,
+  "next_estimated": "2026-08-15"
+}

@@ -1,0 +1,154 @@
+# ============================================
+# 动作类型定义 + 身份推断关键词 v4.0
+# ============================================
+
+# --- 身份推断关键词库 ---
+# AI 从用户首次 dump 的任务中自动推断身份，无需询问
+identity_keywords:
+
+  student:
+    weight: 2           # 命中几个触发判定
+    keywords:
+      - 作业
+      - 考试
+      - 实验
+      - 上课
+      - 小组
+      - 论文
+      - 学分
+      - 高数
+      - 四级
+      - 六级
+      - 考研
+      - 期末
+      - 开学
+      - 暑假
+      - 寒假
+      - 课件
+      - 社团
+      - 宿舍
+      - 选修
+      - 必修
+      - 导师
+      - 开题
+
+  worker:
+    weight: 2
+    keywords:
+      - 会议
+      - 客户
+      - 项目
+      - 周报
+      - 述职
+      - 报销
+      - 出差
+      - 合同
+      - 汇报
+      - KPI
+      - 预算
+      - 季度
+      - 年终
+      - 面试
+      - 招聘
+      - 方案
+      - 需求
+      - 排期
+      - 跟进
+      - 述职
+      - 绩效
+
+# --- 推断规则 ---
+# 命中 ≥ 2 个同一身份关键词 → 自动判定，静默
+# 各命中 1 个（混搭）→ 再观察一轮
+# 0 个 → 顺口问一句
+
+# --- 动作类型推断参考 ---
+# 这些是 AI 做语义分析的参考，不是硬分类
+action_types:
+
+  memorize:
+    label: "记忆"
+    verbs: ["背", "记", "朗读", "读", "复习"]
+    cognitive_demand: "high_focus"    # 需要高度专注
+    natural_time: "morning"           # 自然适合早晨
+    typical_duration: "20-40min"
+    notes: "记忆类任务不需要 DDL，但需要固定 slot"
+
+  exercise:
+    label: "体能"
+    verbs: ["运动", "跑步", "健身", "锻炼", "打球", "游泳"]
+    cognitive_demand: "physical"      # 纯体能，不费脑
+    natural_time: null                # 没有天然最佳时间
+    typical_duration: "30-60min"
+    notes: "依空闲时间安排，从反馈中学你的运动习惯"
+
+  writing:
+    label: "写作"
+    verbs: ["写", "撰", "起草", "输出", "码"]
+    cognitive_demand: "deep_work"
+    natural_time: "morning_deep"
+    typical_duration: "1-3h"
+    notes: "需要整块时间，拆分前置准备+正式写作"
+
+  editing:
+    label: "修改"
+    verbs: ["改", "修", "润色", "校对", "检查"]
+    cognitive_demand: "moderate"
+    natural_time: null
+    typical_duration: "30min-2h"
+    notes: "可在深度任务之间穿插"
+
+  problem_solving:
+    label: "解题"
+    verbs: ["做", "解", "算", "练", "习题"]
+    cognitive_demand: "deep_work"
+    natural_time: "afternoon"         # 解题适合连续整块时间
+    typical_duration: "1-4h"
+    notes: "做题类通常带 DDL（上课要讲/要交）"
+
+  coding:
+    label: "编程"
+    verbs: ["写代码", "编程", "调", "debug", "合并", "commit"]
+    cognitive_demand: "deep_work"
+    natural_time: "morning_deep"
+    typical_duration: "1-4h"
+    notes: "需要静心，不要碎片化安排"
+
+  design:
+    label: "设计"
+    verbs: ["设计", "画", "海报", "做图", "排版"]
+    cognitive_demand: "creative"
+    natural_time: "afternoon_recovery"  # 创意工作适合午后
+    typical_duration: "1-3h"
+    notes: "创意工作需要宽松的时间预期"
+
+  social:
+    label: "社交"
+    verbs: ["开会", "做客", "聚会", "讨论", "见面"]
+    cognitive_demand: "external_block"  # 外部时间块
+    natural_time: null
+    typical_duration: null
+    notes: "这是外部时间块，AI 不排，绕开它安排其他任务"
+
+  errand:
+    label: "跑腿"
+    verbs: ["买", "取", "送", "办"]
+    cognitive_demand: "shallow"
+    natural_time: null
+    typical_duration: "15-30min"
+    notes: "插在出门前或回家路上"
+
+# --- 学习数据模型 ---
+# 每次任务完成后的记录结构
+learning_record:
+  task_name: ""                    # 任务名
+  action_type: ""                  # 推断的动作类型
+  estimated_minutes: 0             # AI 预估
+  actual_minutes: 0                # 用户反馈的实际耗时
+  scheduled_day: ""                # 安排在周几
+  scheduled_slot: ""               # 安排在哪个时段
+  actual_start: ""                 # 实际开始时间（次晨反馈）
+  actual_end: ""                   # 实际结束时间
+  completed: true/false            # 是否完成
+  moved_count: 0                   # 被移了几次（拖延计数）
+  chosen_strategy: ""              # 延期后选的策略（compress/sacrifice）

@@ -1,0 +1,128 @@
+{
+  "tasks": [
+    {
+      "name": "灵感构思：完成 数据结构大作业",
+      "subject": "专业课",
+      "deadline": "2026-07-16",
+      "size": "small",
+      "_is_subtask": true,
+      "_parent_task": "完成 数据结构大作业",
+      "_step_name": "灵感构思",
+      "_estimated_minutes": 22,
+      "_sub_order": 0,
+      "_top_flag": false
+    },
+    {
+      "name": "快速原型：完成 数据结构大作业",
+      "subject": "专业课",
+      "deadline": "2026-07-16",
+      "size": "small",
+      "_is_subtask": true,
+      "_parent_task": "完成 数据结构大作业",
+      "_step_name": "快速原型",
+      "_estimated_minutes": 33,
+      "_sub_order": 1,
+      "_top_flag": false
+    },
+    {
+      "name": "打磨优化：完成 数据结构大作业",
+      "subject": "专业课",
+      "deadline": "2026-07-16",
+      "size": "small",
+      "_is_subtask": true,
+      "_parent_task": "完成 数据结构大作业",
+      "_step_name": "打磨优化",
+      "_estimated_minutes": 33,
+      "_sub_order": 2,
+      "_top_flag": false
+    },
+    {
+      "name": "整理记录：完成 数据结构大作业",
+      "subject": "专业课",
+      "deadline": "2026-07-16",
+      "size": "small",
+      "_is_subtask": true,
+      "_parent_task": "完成 数据结构大作业",
+      "_step_name": "整理记录",
+      "_estimated_minutes": 22,
+      "_sub_order": 3,
+      "_top_flag": false
+    },
+    {
+      "name": "读《算法导论》第四章",
+      "subject": "读书笔记",
+      "deadline": "2026-07-22",
+      "size": "small",
+      "difficulty": 2,
+      "_breakdown_index": 2.1,
+      "_breakdown_result": "skip"
+    },
+    {
+      "name": "整理小组项目文档",
+      "subject": "日常事务",
+      "deadline": "2026-07-15",
+      "size": "small",
+      "difficulty": 1,
+      "_breakdown_index": 3.5,
+      "_breakdown_result": "skip"
+    },
+    {
+      "name": "准备 英语口语考试",
+      "subject": "语言学习",
+      "deadline": "2026-07-18",
+      "size": "medium",
+      "difficulty": 3,
+      "_breakdown_index": 5.5,
+      "_breakdown_result": "ask"
+    },
+    {
+      "name": "[依赖: 完成大作业] 提交大作业到教学平台",
+      "subject": "专业课",
+      "deadline": "2026-07-20",
+      "size": "small",
+      "difficulty": 2,
+      "_breakdown_index": 5.75,
+      "_breakdown_result": "ask"
+    }
+  ],
+  "ask_list": [
+    {
+      "name": "准备 英语口语考试",
+      "subject": "语言学习",
+      "deadline": "2026-07-18",
+      "size": "medium",
+      "difficulty": 3,
+      "_breakdown_index": 5.5,
+      "_breakdown_result": "ask"
+    },
+    {
+      "name": "[依赖: 完成大作业] 提交大作业到教学平台",
+      "subject": "专业课",
+      "deadline": "2026-07-20",
+      "size": "small",
+      "difficulty": 2,
+      "_breakdown_index": 5.75,
+      "_breakdown_result": "ask"
+    }
+  ],
+  "action_log": [
+    {
+      "original_name": "完成 数据结构大作业",
+      "subject": "专业课",
+      "breakdown_index": 7.85,
+      "decision": "auto",
+      "subtasks": [
+        "灵感构思：完成 数据结构大作业",
+        "快速原型：完成 数据结构大作业",
+        "打磨优化：完成 数据结构大作业",
+        "整理记录：完成 数据结构大作业"
+      ]
+    }
+  ],
+  "stats": {
+    "total_original": 5,
+    "auto_breakdown": 1,
+    "pending_ask": 2,
+    "skipped": 2
+  }
+}

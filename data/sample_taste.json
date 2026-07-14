@@ -1,0 +1,7 @@
+{
+  "spicy": {"score": 3, "notes": "偶尔吃辣"},
+  "sweet": {"score": 7, "notes": "喜欢甜食"},
+  "sour": {"score": 5, "notes": "一般偏好"},
+  "salty": {"score": 4, "notes": "不偏好"},
+  "mild": {"score": 6, "notes": "接受清淡"}
+}

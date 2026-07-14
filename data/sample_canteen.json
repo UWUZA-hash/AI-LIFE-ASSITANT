@@ -1,0 +1,22 @@
+{
+  "自选": {
+    "known_dishes": ["番茄炒蛋", "清炒西兰花", "蒸蛋", "红烧鸡腿", "清炒时蔬"],
+    "avg_price": 8,
+    "visit_count": 5
+  },
+  "面食": {
+    "known_dishes": ["牛肉面", "酸菜鱼米线"],
+    "avg_price": 10,
+    "visit_count": 2
+  },
+  "小炒": {
+    "known_dishes": ["宫保鸡丁", "红烧肉"],
+    "avg_price": 12,
+    "visit_count": 3
+  },
+  "套餐": {
+    "known_dishes": ["烤肉饭", "煲仔饭"],
+    "avg_price": 10,
+    "visit_count": 1
+  }
+}

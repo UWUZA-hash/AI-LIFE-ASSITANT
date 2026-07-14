@@ -1,0 +1,45 @@
+{
+  "tasks": [
+    {
+      "name": "完成 数据结构大作业",
+      "subject": "专业课",
+      "deadline": "2026-07-16",
+      "size": "medium",
+      "difficulty": 4
+    },
+    {
+      "name": "准备 英语口语考试",
+      "subject": "语言学习",
+      "deadline": "2026-07-18",
+      "size": "medium",
+      "difficulty": 3
+    },
+    {
+      "name": "读《算法导论》第四章",
+      "subject": "读书笔记",
+      "deadline": "2026-07-22",
+      "size": "small",
+      "difficulty": 2
+    },
+    {
+      "name": "整理小组项目文档",
+      "subject": "日常事务",
+      "deadline": "2026-07-15",
+      "size": "small",
+      "difficulty": 1
+    },
+    {
+      "name": "[依赖: 完成大作业] 提交大作业到教学平台",
+      "subject": "专业课",
+      "deadline": "2026-07-20",
+      "size": "small",
+      "difficulty": 2
+    }
+  ],
+  "history": {
+    "专业课": {"avg_minutes": 55, "total_tasks": 3},
+    "语言学习": {"avg_minutes": 40, "total_tasks": 2},
+    "读书笔记": {"avg_minutes": 25, "total_tasks": 4},
+    "日常事务": {"avg_minutes": 15, "total_tasks": 5}
+  }
+}

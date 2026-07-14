@@ -1,0 +1,16 @@
+# ============================================
+# 依赖链规则 v3.0
+# ============================================
+
+# --- 显式依赖标记 ---
+# 用户在任务名中用 "[依赖: XXX]" 标记
+explicit_markers:
+  dependency_prefix: "[依赖:"
+  dependency_suffix: "]"
+
+# --- 依赖排序规则 ---
+sorting_rules:
+  # parallel：与 DDL 并行算分，前驱任务加分
+  # strict：严格先排前驱再排后继
+  dependency_priority: "parallel"
+  dependency_bonus: 1.5

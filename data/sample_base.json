@@ -1,0 +1,11 @@
+{
+  "gender": "女",
+  "height": "165",
+  "restrictions": "海鲜",
+  "health_perm": "脾胃弱",
+  "tastes": "酸甜",
+  "canteen": "自选、面食、小炒、套餐",
+  "wake_time": "07:30",
+  "sleep_time": "23:00",
+  "identity_keywords": ["作业", "实验"]
+}
